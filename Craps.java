@@ -1,7 +1,7 @@
 import java.security.SecureRandom;
 
 public class Craps{
-  private static final SecureRandom rand = new SecureRandom();
+  SecureRandom rand = new SecureRandom();
   private enum Status{CONTINUE, VENCEU, PERDEU};
   private static final int DOIS = 2;
   private static final int TRES = 3;
@@ -10,7 +10,7 @@ public class Craps{
   private static final int DOZE = 12;
  
   public static void main(String[] args){
-    int meusPontos = 0;
+    meusPontos = 0;
     Status statusJogo;
     int somaDados = rolarDado();
 
@@ -25,7 +25,7 @@ public class Craps{
         statusJogo = Status.PERDEU;
         break;
       default:
-        statusJogo = Status.CONTINUE;
+        statusjogos = Status.CONTINUE;
         meusPontos = somaDados;
         System.out.println("pontos atuais: " + meusPontos);
         break; 
@@ -42,10 +42,10 @@ public class Craps{
       }
     }    
     
-    if(statusJogo == Status.VENCEU){
-      System.out.println("VOCE VENCEU!!!!!!!!");
+    if(statusJogo == Status.GANHOU){
+      System.out.println("VOCÊ VENCEU!!!!!!!!");
     }else{
-      System.out.println("VOCE PERDEU!!!!!!!!");
+      System.out.prinln("VOCÊ PERDEU!!!!!!!!");
     }
   }
 
@@ -58,6 +58,6 @@ public class Craps{
     System.out.println("Dados rolados: " + dado1 + " e " + dado2);
     System.out.println("Valor total: " + soma);
 
-    return soma;
+    return sum;
   }
 }
